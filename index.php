@@ -36,6 +36,7 @@ if (is_dir($dir)){
       if ($file === "error_log") $listfile=false;
       if ($file === "version") $listfile=false;
       if ($file === "donate.svg") $listfile=false;
+      if ($file === "README.md") $listfile=false;
       if (strpos($file,'4m') !== false) {
           $listfile=false;
       }
