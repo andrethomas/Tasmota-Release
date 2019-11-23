@@ -32,12 +32,16 @@ if (is_dir($dir)){
       $fs = filesize($file);
       if ($file === ".") $listfile=false;
       if ($file === "..") $listfile=false;
+      if ($file === ".git") $listfile=false;
       if ($file === "index.php") $listfile=false;
       if ($file === "error_log") $listfile=false;
       if ($file === "version") $listfile=false;
       if ($file === "donate.svg") $listfile=false;
       if ($file === "README.md") $listfile=false;
-      if ($file === "arc") $listfile=false;   
+      if ($file === "arc") $listfile=false;
+      if ($file === "release.php") $listfile=false;
+      if ($file === "class.php") $listfile=false;
+
       if (strpos($file,'4m') !== false) {
           $listfile=false;
       }
