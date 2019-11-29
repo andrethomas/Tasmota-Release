@@ -3,9 +3,9 @@
   include 'class.php';
   $release = new ReleaseClass();
 
-  $release->setversion("sonoff", "6.7.1", "20191026");
+  $release->setversion("tasmota", "7.1.0", "20191129");
 
-  $release->addfile("","English"); // sonoff.bin
+  $release->addfile("","English"); // tasmota.bin
   $release->addfile("minimal","English");
   $release->addfile("basic","English");
   $release->addfile("knx","English");
