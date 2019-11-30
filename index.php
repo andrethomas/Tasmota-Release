@@ -38,7 +38,6 @@ if (is_dir($dir)){
       if ($file === "version") $listfile=false;
       if ($file === "donate.svg") $listfile=false;
       if ($file === "README.md") $listfile=false;
-      if ($file === "arc") $listfile=false;
       if ($file === "release.php") $listfile=false;
       if ($file === "class.php") $listfile=false;
 
@@ -59,8 +58,6 @@ if (is_dir($dir)){
 }
 ?>
 <pre>
-
- Previous release binaries have been archived <a href=arc/>here</a>
 
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
