@@ -40,8 +40,8 @@
   echo "{\r\n"; // Begin JSON
   echo "\"release-" . $release->version . "\": [\r\n";
   for ($v = 0; $v < $release->releasecount; $v++) {
-    $fs = "0";
-    $fs = filesize($release->releaselist[$v][2]);
+    $fs = 0;
+    $fs = filesize("./" . $release->releaselist[$v][2]);
     echo "{\r\n";
     echo "\"variant\": \"" . $release->releaselist[$v][0] . "\",\r\n";
     echo "\"language\": \"" . $release->releaselist[$v][1] . "\",\r\n";

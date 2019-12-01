@@ -27,7 +27,9 @@ class ReleaseClass {
       $this->releaselist[$this->releasecount][0] = $variant;
       $this->releaselist[$this->releasecount][2] = $this->prefix . "-" . $variant . ".bin";
     }
-    $this->releasecount++;
+    if (file_exists($this->releaselist[$this->releasecount][2])) {
+      $this->releasecount++;
+    }
   }
 
 }
