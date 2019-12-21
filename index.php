@@ -24,7 +24,7 @@ if (is_dir($dir)){
   echo "</pre>";
   echo "<table cellpadding=5>";
 //  echo "<tr><td>Firmware Link</td><td>OTA URL</td><td>Size</td><td>Firmware Version</td><td>Linker MAP</td></tr>";
-  echo "<tr><td>Firmware Link</td><td>OTA URL</td><td>Size</td><td>Firmware Version</td></tr>";
+  echo "<tr><td>Firmware Link</td><td>OTA URL</td><td>Size</td><td>Firmware Version</td><td>Timestamp</td></tr>";
   $files = scandir($dir);
   rsort($files);
   foreach ($files as $file) {
@@ -50,7 +50,7 @@ if (is_dir($dir)){
       if ($listfile === true) {
           echo "<tr>";
           $mapfile = substr($file,0,strlen($file)-3) . "map.gz";
-          echo "<td><a href=" . $file . ">" . $file . "</a></td><td>http://thehackbox.org/tasmota/release/" . $file . "</td><td>" . round_up($fs/1024,0) . "k</td><td>" . $firmware_version . "</td></td>";
+          echo "<td><a href=" . $file . ">" . $file . "</a></td><td>http://thehackbox.org/tasmota/release/" . $file . "</td><td>" . round_up($fs/1024,0) . "k</td><td>" . $firmware_version . "</td></td><td> " . date("Ymd H:i",filemtime($file)+7200) . "</td>";
           echo "</tr>";
       }
   }
