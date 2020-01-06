@@ -1,7 +1,7 @@
 <pre>
  <b></b>Alternative firmware for ESP8266 based devices like iTead Sonoff with web UI,<br> rules and timers, OTA updates, custom device templates and sensor support.<br><br> Allows control over MQTT, HTTP, Serial and KNX for integrations with smart home systems. </b>
 
- Copyright (C) 2019  Theo Arends
+ Copyright (C) 2020  Theo Arends
 </pre>
 
 <?php
