@@ -27,7 +27,8 @@
   $release->addfile("NL","Dutch (Nederland)");
   $release->addfile("PL","Polish with diacritics (Poland)");
   $release->addfile("PT","Portuguese (Portugal)");
-  $release->addfile("RU","Russian (Rissia)");
+  $release->addfile("RO","Romanian (Romania)");
+  $release->addfile("RU","Russian (Russia)");
   $release->addfile("SE","Swedish (Svenska)");
   $release->addfile("SK","Slovak with diacritics (Slovak)");
   $release->addfile("TR","Turkish (Turkey)");
