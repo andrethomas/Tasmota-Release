@@ -6,6 +6,8 @@
 
 <?php
 
+$gz_color = " bgcolor=#fcf7cf bordercolor=#fcf7cf";
+
 function round_up($number, $precision = 2)
 {
     $fig = (int) str_pad('1', $precision, '0');
@@ -24,12 +26,13 @@ if (is_dir($dir)){
   echo "</pre>";
   echo "<table cellpadding=5>";
 //  echo "<tr><td>Firmware Link</td><td>OTA URL</td><td>Size</td><td>Firmware Version</td><td>Linker MAP</td></tr>";
-  echo "<tr><td>Firmware Link</td><td>OTA URL</td><td>Size</td><td>Firmware Version</td><td>Timestamp</td></tr>";
+  echo "<tr><td" . $gz_color . ">Firmware Link</td><td" . $gz_color . ">OTA URL</td><td" . $gz_color . ">Size</td><td>Firmware Link</td><td>OTA URL</td><td>Size</td><td>Firmware Version</td><td>Timestamp</td></tr>";
   $files = scandir($dir);
   rsort($files);
   foreach ($files as $file) {
       $listfile = true;
       $fs = filesize($file);
+      $fsgz = filesize($file . ".gz");
       if ($file === ".") $listfile=false;
       if ($file === "..") $listfile=false;
       if ($file === ".git") $listfile=false;
@@ -47,10 +50,13 @@ if (is_dir($dir)){
       if (strpos($file,'map') !== false) {
           $listfile=false;
       }
+      if (strpos($file,'bin.gz') !== false) {
+          $listfile=false;
+      }
       if ($listfile === true) {
           echo "<tr>";
           $mapfile = substr($file,0,strlen($file)-3) . "map.gz";
-          echo "<td><a href=" . $file . ">" . $file . "</a></td><td>http://thehackbox.org/tasmota/release/" . $file . "</td><td>" . round_up($fs/1024,0) . "k</td><td>" . $firmware_version . "</td></td><td> " . date("Ymd H:i",filemtime($file)+7200) . "</td>";
+          echo "<td" . $gz_color . "><a href=" . $file . ".gz>" . $file . ".gz</a></td><td" . $gz_color . ">http://thehackbox.org/tasmota/release/" . $file . ".gz</td><td" . $gz_color . ">" . round_up($fsgz/1024,0) . "k</td><td><a href=" . $file . ">" . $file . "</a></td><td>http://thehackbox.org/tasmota/release/" . $file . "</td><td>" . round_up($fs/1024,0) . "k</td><td>" . $firmware_version . "</td></td><td> " . date("Ymd H:i",filemtime($file)+7200) . "</td>";
           echo "</tr>";
       }
   }
