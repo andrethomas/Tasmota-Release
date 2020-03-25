@@ -26,7 +26,7 @@ if (is_dir($dir)){
   echo "</pre>";
   echo "<table cellpadding=5>";
 //  echo "<tr><td>Firmware Link</td><td>OTA URL</td><td>Size</td><td>Firmware Version</td><td>Linker MAP</td></tr>";
-  echo "<tr><td" . $gz_color . ">Firmware Link</td><td" . $gz_color . ">OTA URL</td><td" . $gz_color . ">Size</td><td>Firmware Link</td><td>OTA URL</td><td>Size</td><td>Firmware Version</td><td>Timestamp</td></tr>";
+  echo "<tr><td" . $gz_color . ">GZipped Firmware Link</td><td" . $gz_color . ">GZipped OTA URL</td><td" . $gz_color . ">GZipped Size</td><td>Firmware Link</td><td>OTA URL</td><td>Size</td><td>Firmware Version</td><td>Timestamp</td></tr>";
   $files = scandir($dir);
   rsort($files);
   foreach ($files as $file) {
