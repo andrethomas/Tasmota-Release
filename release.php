@@ -3,7 +3,7 @@
   include 'class.php';
   $release = new ReleaseClass();
 
-  $release->setversion("tasmota", trim(file_get_contents('version')), "20191221");
+  $release->setversion("tasmota", trim(file_get_contents('version')), "20200730");
 
   $release->addfile("","English"); // tasmota.bin
   $release->addfile("minimal","English");
@@ -12,6 +12,8 @@
   $release->addfile("sensors","English");
   $release->addfile("display","English");
   $release->addfile("ir","English");
+  $release->addfile("ircustom","English");
+  $release->addfile("zbbridge","English");
   $release->addfile("BG","Bulgarian (Bulgaria)");
   $release->addfile("BR","Portuguese (Brazil)");
   $release->addfile("CN","Simplified Chinese (China)");
