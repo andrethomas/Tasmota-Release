@@ -22,7 +22,7 @@ if (is_dir($dir)){
   echo "<pre>";
   echo " Release binaries for Tasmota firmware from <a href=\"https://github.com/arendst/Tasmota/releases/\">https://github.com/arendst/Tasmota/releases/</a>\n\n";
   echo " If you benefit from the Tasmota project please consider making a donation\n\n <a href=https://paypal.me/tasmota><img src=donate.svg></a>\n\n";
-  echo " <font color=red><b>These binaries are built using core 2.7.2.1</b></font>\n\n";
+  echo " <font color=red><b>These binaries are built using core 2.7.4.1</b></font>\n\n";
   echo "</pre>";
   echo "<table cellpadding=5>";
 //  echo "<tr><td>Firmware Link</td><td>OTA URL</td><td>Size</td><td>Firmware Version</td><td>Linker MAP</td></tr>";
